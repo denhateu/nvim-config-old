@@ -1,4 +1,8 @@
+" Настройки GUI
+set guifont=Fira\ Code:h9
+
 set encoding=utf-8
+set mouse=a
 set cursorline
 set scrolloff=7
 
