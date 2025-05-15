@@ -1,6 +1,3 @@
-" Настройки GUI
-set guifont=Fira\ Code:h9
-
 set encoding=utf-8
 set mouse=a
 set cursorline
@@ -34,6 +31,10 @@ call plug#begin()
 Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+" Настройки gruvbox
+let g:gruvbox_bold = 0
+let g:gruvbox_italic = 0
 
 " Темная тема по умолчанию
 colorscheme gruvbox
