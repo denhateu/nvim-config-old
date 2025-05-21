@@ -29,6 +29,7 @@ set noswapfile
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -49,4 +50,13 @@ augroup numbertoggle
 augroup END
 
 " Сочетания клавиш
+let mapleader = ','
+
 imap kj <ESC>
+
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+
+" Выход из вима если открыт последний буфер и в нем открыт NERDTree
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
